@@ -3,7 +3,7 @@ const app = express();
 const dotenv = require('dotenv')
 app.use(express.static('./public'))
 dotenv.config()
-const PORT = process.env._PORT;
+const PORT = process.env._PORT || 8000;
 const {fetchHomeData,fetchAllProjects,fetchAllSkills,fetchContactDetails} = require('./controllers/userControllers');
 
 app.use(function(req, res, next) {
